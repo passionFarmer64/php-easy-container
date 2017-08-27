@@ -1,0 +1,13 @@
+{
+    "name": "johnroyer/php-easy-container",
+    "type": "library",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Zero",
+            "email": "john.royer@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
