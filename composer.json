@@ -1,0 +1,18 @@
+{
+    "name": "johnroyer/php-easy-container",
+    "type": "library",
+    "license": "BSD",
+    "authors": [
+        {
+            "name": "Zero",
+            "email": "john.royer@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0.0",
+        "codeception/aspect-mock": "^2.0.0"
+    },
+    "minimum-stability": "stable"
+}
