@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Zeroplex;
+namespace Zeroplex\Tool;
 
 class Container implements \ArrayAccess
 {
