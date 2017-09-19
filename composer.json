@@ -14,5 +14,15 @@
         "phpunit/phpunit": "^6.0.0",
         "codeception/aspect-mock": "^2.0.0"
     },
+    "autoload": {
+        "PSR-4": {
+            "Zeroplex\\Tool\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "PSR-4": {
+            "Zeroplex\\Tool\\Test\\": "tests/src"
+        }
+    },
     "minimum-stability": "stable"
 }
