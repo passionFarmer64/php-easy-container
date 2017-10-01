@@ -1,7 +1,7 @@
 {
     "name": "johnroyer/php-easy-container",
     "type": "library",
-    "license": "BSD",
+    "license": "MIT",
     "authors": [
         {
             "name": "Zero",
