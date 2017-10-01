@@ -6,4 +6,4 @@ An implement for singleton and some features.
 
 # Requirement
 
-- PHP 7.1 (7.0 us not supported)
+- PHP 7.1 (7.0 is not supported)
