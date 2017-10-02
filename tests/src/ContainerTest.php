@@ -1,9 +1,9 @@
 <?php
 
-namespace Zeroplex\Tool\Test;
+namespace Zeroplex\Container\Test;
 
 use PHPUnit\Framework\TestCase;
-use Zeroplex\Tool\Container;
+use Zeroplex\Container\Container;
 
 class ContainerTest extends TestCase
 {
