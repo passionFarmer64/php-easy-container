@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Zeroplex\Container;
 
 class Container implements \ArrayAccess
@@ -23,7 +21,7 @@ class Container implements \ArrayAccess
      * @param mixed $service object or closure
      *
      */
-    public function singleton(string $name, $service): void
+    public function singleton($name, $service)
     {
         $this->checkServiceName($name);
 
@@ -35,7 +33,7 @@ class Container implements \ArrayAccess
     /**
      * @throws \InvalidArgumentException if service name is invalid
      */
-    public function checkServiceName(string $name)
+    public function checkServiceName($name)
     {
         if (empty($name)) {
             throw new \InvalidArgumentException('service name can not be empty');
@@ -61,7 +59,7 @@ class Container implements \ArrayAccess
      * @throws \InvalidArgumentException service name is invalid
      * @throws \RuntimeException service name is wrong
      */
-    public function provide(string $name, \Closure $provider): void
+    public function provide($name, \Closure $provider)
     {
         $this->checkServiceName($name);
         $this->checkDuplicatedName($name);
@@ -75,13 +73,13 @@ class Container implements \ArrayAccess
      * @param string $name service name
      * @throws \RuntimeException if service name is not found
      */
-    public function remove($name): void
+    public function remove($name)
     {
         $this->removeService($name);
         $this->removeProvider($name);
     }
 
-    public function removeService($name): void
+    public function removeService($name)
     {
         if (array_key_exists($name, $this->services)) {
             unset($this->services[$name]);
@@ -103,7 +101,7 @@ class Container implements \ArrayAccess
      *
      * @throws \RuntimeException if service or provider name is not found
      */
-    public function get(string $name)
+    public function get($name)
     {
         if ($this->hasService($name)) {
             return $this->getSingletonService($name);
@@ -133,12 +131,12 @@ class Container implements \ArrayAccess
      * @param string $name service name
      * @return bool true if service found, false if not
      */
-    public function hasService($name): bool
+    public function hasService($name)
     {
         return array_key_exists($name, $this->services);
     }
 
-    public function hasProvider($name): bool
+    public function hasProvider($name)
     {
         return array_key_exists($name, $this->providers);
     }
